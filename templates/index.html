@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"> <!-- link to my CSS file -->
+</head>
+
+<body>
+    <div>
+        <h1>To-Do List</h1>
+
+        <form action="/add" method="post">
+            <div>
+                <label for="task">Todo task:</label>
+                <input type="text" id="task" name="task" placeholder="Enter a Task" required>
+            </div>
+            <div>
+                <label for="due_date">Due date:</label>
+                <input type="date" id="due_date" name="due_date">
+            </div>
+            <div>
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" placeholder="Enter a Category">
+            </div>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <hr>
+        {% for todo in todo_list %}
+        <p>{{ todo.id }}: {{ todo.task }}</p>
+        <p>Due: {{ todo.due_date }}</p>
+        <p>Priority:<span class="priority"> {{ todo.priority }}</span></p>
+        <p>Category: {{ todo.category }}</p>
+        {% if not todo.complete %}
+        <p>Task Incomplete. <a href="/update/{{ todo.id }}">Mark as complete?</a></p>
+        {% else %}
+        <p>Task Complete</p>
+        {% endif %}
+        <a href="/delete/{{ todo.id }}">Delete this task?</a>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

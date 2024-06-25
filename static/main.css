@@ -1,0 +1,100 @@
+/* main.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+div {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #005DA6; /* Hover effect */
+}
+
+/* Input field focus styling */
+input[type="text"]:focus,
+select:focus {
+    border-color: #0074D9;
+    box-shadow: 0 0 5px rgba(0, 116, 217, 0.5);
+}
+
+/* Task list styles */
+p {
+    margin: 10px 0;
+}
+
+a {
+    color: #0074D9;
+    text-decoration: none;
+}
+
+/* Completed task styles */
+p.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #f0f0f0; /* Background color for completed tasks */
+}
+
+/* Priority label styles */
+span.priority {
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* Additional task item styling */
+p.task-item {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Category label styles */
+span.category {
+    font-weight: bold;
+    color: #555;
+}
+
