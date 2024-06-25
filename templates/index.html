@@ -38,7 +38,7 @@
 
         <hr>
         {% for todo in todo_list %}
-        <p>{{ todo.id }}: {{ todo.task }}</p>
+        <p class="task-item">{{ todo.id }}: {{ todo.task }}</p>
         <p>Due: {{ todo.due_date }}</p>
         <p>Priority:<span class="priority"> {{ todo.priority }}</span></p>
         <p>Category: {{ todo.category }}</p>
